@@ -1,0 +1,15 @@
+{
+  "runtime.version": "LuaJIT",
+  "workspace.library": [
+    "/home/addigoat/.local/share/kristal-lua-docs/library",
+    "/home/addigoat/projects/Kristal/src"
+  ],
+  "workspace.checkThirdParty": false,
+  "workspace.maxPreload": 5000,
+  "workspace.preloadFileSize": 5000,
+  "diagnostics.disable": ["lowercase-global"],
+    "diagnostics.globals": [
+        "Class",
+        "rad"
+    ]
+}
