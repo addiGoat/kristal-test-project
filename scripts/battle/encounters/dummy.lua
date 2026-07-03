@@ -16,6 +16,9 @@ function Dummy:init()
 
     --- Uncomment this line to add another!
     --self:addEnemy("dummy")
+
+    self.hide_world = false
+    self.no_end_message = true
 end
 
 return Dummy

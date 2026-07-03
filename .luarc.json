@@ -10,6 +10,7 @@
   "diagnostics.disable": ["lowercase-global"],
     "diagnostics.globals": [
         "Class",
-        "rad"
+        "rad",
+        "MathUtils"
     ]
 }

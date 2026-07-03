@@ -24,8 +24,8 @@ function Dummy:init()
     -- List of possible wave ids, randomly picked each turn
     self.waves = {
         "basic",
-        "aiming",
-        "movingarena"
+        "movingarena",
+        "example_wave"
     }
 
     -- Dialogue randomly displayed in the enemy's speech bubble
@@ -50,6 +50,8 @@ function Dummy:init()
     -- Register party act with Ralsei called "Tell Story"
     -- (second argument is description, usually empty)
     self:registerAct("Tell Story", "", {"ralsei"})
+    self:registerAct("Intimidate", "", {"susie", "ralsei"})
+
 end
 
 function Dummy:onAct(battler, name)
@@ -64,13 +66,17 @@ function Dummy:onAct(battler, name)
             "* It seems the dummy just wanted\nto see you happy."
         }
 
-    elseif name == "Tell Story" then
-        -- Loop through all enemies
-        for _, enemy in ipairs(Game.battle.enemies) do
-            -- Make the enemy tired
-            enemy:setTired(true)
-        end
-        return "* You and Ralsei told the dummy\na bedtime story.\n* The enemies became [color:blue]TIRED[color:reset]..."
+    -- elseif name == "Tell Story" then
+    --     -- Loop through all enemies
+    --     for _, enemy in ipairs(Game.battle.enemies) do
+    --         -- Make the enemy tired
+    --         enemy:setTired(true)
+    --     end
+    --     return "* You and Ralsei told the dummy\na bedtime story.\n* The enemies became [color:blue]TIRED[color:reset]..."
+
+    elseif name == "Intimidate" then
+        self:addMercy(100)
+        return "* You all stare at the dummy.\nThe air is tense.\nThe dummy is afraid."
 
     elseif name == "Standard" then --X-Action
         -- Give the enemy 50% mercy
