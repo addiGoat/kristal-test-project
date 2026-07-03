@@ -2,7 +2,7 @@
     // The ID of your project. Should be unique!!
     "id": "test_game",
     // Displays on the main menu.
-    "name": "Test game",
+    "name": "The Scary Route",
     // Displays underneath the name. Optional.
     "subtitle": "",
 
@@ -20,7 +20,7 @@
     "map": "room1",
 
     // The party. The first character is the player.
-    "party": ["kris", "susie", "ralsei"],
+    "party": ["ralsei"],
 
     // The inventory. Contains three darkburgers, a cell phone and a shadow crystal by default.
     "inventory": {
