@@ -6,6 +6,13 @@
             "width": 1000,
             "x": 0,
             "y": 0
+        },
+        {
+            "fileName": "castle2.tmx",
+            "height": 960,
+            "width": 640,
+            "x": -640,
+            "y": -480
         }
     ],
     "onlyShowAdjacentMaps": false,
