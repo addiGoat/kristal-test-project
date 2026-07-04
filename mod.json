@@ -1,6 +1,6 @@
 {
     // The ID of your project. Should be unique!!
-    "id": "test_game",
+    "id": "delta-test",
     // Displays on the main menu.
     "name": "The Scary Route",
     // Displays underneath the name. Optional.
@@ -17,7 +17,7 @@
     "chapter": 5,
 
     // The map that you start in when first starting the project.
-    "map": "room1",
+    "map": "example_map",
 
     // The party. The first character is the player.
     "party": ["ralsei"],

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.11" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="25">
+ <editorsettings>
+  <export target="map2.lua" format="lua"/>
+ </editorsettings>
+ <tileset firstgid="1" source="../tilesets/example_tileset.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="16" height="12">
+  <data encoding="csv">
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,
+23,1,2,2,2,2,2,2,2,2,3,23,23,23,23,23,
+2,11,8,8,8,8,8,8,8,8,9,23,23,23,23,23,
+8,8,8,8,8,8,8,8,8,8,9,23,23,23,23,23,
+14,5,8,8,8,8,8,8,8,8,9,23,23,23,23,23,
+23,7,8,8,8,8,8,8,8,8,9,23,23,23,23,23,
+23,7,8,8,8,8,8,8,8,8,9,23,23,23,23,23,
+23,13,14,14,14,14,14,14,14,14,15,23,23,23,23,23,
+23,19,20,20,20,20,20,20,20,20,21,23,23,23,23,23,
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,
+23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23
+</data>
+ </layer>
+ <objectgroup color="#aa55ff" id="3" name="markers">
+  <object id="19" name="spawn" x="40.6667" y="142.667">
+   <point/>
+  </object>
+  <object id="20" name="exit " x="244" y="238">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup color="#55ffff" id="4" name="collision" visible="0">
+  <object id="5" x="40" y="320" width="400" height="40"/>
+  <object id="6" x="440" y="40" width="40" height="280"/>
+  <object id="7" x="0" y="200" width="40" height="120"/>
+  <object id="8" x="0" y="40" width="40" height="40"/>
+ </objectgroup>
+ <objectgroup color="#ffaaff" id="5" name="objects">
+  <object id="21" name="transition" x="-40" y="80" width="40" height="120">
+   <properties>
+    <property name="facing" value="left"/>
+    <property name="map" value="example_map"/>
+    <property name="marker" value="exit"/>
+   </properties>
+  </object>
+  <object id="22" name="chest" x="240" y="160">
+   <properties>
+    <property name="money" type="int" value="100"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+</map>

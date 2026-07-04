@@ -7,7 +7,8 @@
   "workspace.checkThirdParty": false,
   "workspace.maxPreload": 5000,
   "workspace.preloadFileSize": 5000,
-  "diagnostics.disable": ["lowercase-global"],
+  "diagnostics.disable": ["lowercase-global",
+        "unused-local"],
     "diagnostics.globals": [
         "Class",
         "rad",
