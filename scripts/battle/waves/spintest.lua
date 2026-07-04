@@ -17,7 +17,8 @@ function SpinTest:onStart()
 
 
     self.timer:everyInstant(1, function()
-        local x, y = Game.battle.soul.x, Game.battle.soul.y - 30
+        local x, y = dummy:getRelativePos(dummy.width/2, dummy.height/2)
+        local spawnX, spawnY = Game.battle.arena.left, -5
         local bullet = self:spawnBullet("smallbullet", x, y, 0, 8)
 
         bullet.physics.spin = math.rad(10)

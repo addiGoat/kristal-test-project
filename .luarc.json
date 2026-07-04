@@ -11,6 +11,8 @@
     "diagnostics.globals": [
         "Class",
         "rad",
-        "MathUtils"
+        "MathUtils",
+        "Game",
+        "Wave"
     ]
 }
