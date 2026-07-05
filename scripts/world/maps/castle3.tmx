@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.11" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="24" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="5" nextobjectid="15">
+ <editorsettings>
+  <export target="castle3.lua" format="lua"/>
+ </editorsettings>
+ <tileset firstgid="1" source="../tilesets/castle1F.tsx"/>
+ <layer id="1" name="tiles" width="24" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,55,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,55,
+0,0,0,0,3,54,54,54,54,54,54,54,54,54,54,22,54,12,13,14,15,16,54,55,
+4,54,54,5,2,54,54,54,54,54,54,54,54,54,54,54,54,28,29,30,31,32,54,55,
+54,54,54,5,3,54,54,54,54,54,54,54,54,54,54,54,54,54,45,46,47,54,4,55,
+54,54,54,18,35,20,20,20,36,20,20,20,20,20,20,20,20,20,61,62,63,20,20,55,
+20,20,20,21,70,73,73,73,73,73,73,73,73,73,73,73,73,73,73,73,73,73,73,55,
+73,73,73,74,82,82,82,82,82,82,82,82,82,50,82,82,82,82,82,82,82,82,82,55,
+82,82,82,82,82,82,82,52,82,82,82,82,82,82,82,82,82,82,82,82,82,82,66,55,
+55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,
+55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,
+55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55
+</data>
+ </layer>
+ <objectgroup color="#55aaff" id="4" name="collision">
+  <object id="4" x="0" y="360" width="920" height="40"/>
+  <object id="5" x="920" y="240" width="40" height="120"/>
+  <object id="6" x="160" y="200" width="585.333" height="40"/>
+  <object id="7" x="816.667" y="200" width="103.333" height="40"/>
+  <object id="8" x="0" y="240" width="160" height="40"/>
+ </objectgroup>
+ <objectgroup color="#aa00ff" id="2" name="markers">
+  <object id="1" name="exit" x="60" y="320">
+   <point/>
+  </object>
+  <object id="2" name="spawn" x="780" y="190">
+   <point/>
+  </object>
+  <object id="14" name="intro_end_pos" x="778" y="296">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup color="#55ff00" id="3" name="objects">
+  <object id="9" name="interactable" x="600" y="200" width="80" height="40">
+   <properties>
+    <property name="text">[voice:ralsei][face:ralsei/pleased]* I don't need to go
+there right now...</property>
+   </properties>
+  </object>
+  <object id="10" name="intro_cutscene" x="776" y="55.3333">
+   <point/>
+  </object>
+  <object id="11" name="transition" x="-40" y="280" width="40" height="80">
+   <properties>
+    <property name="facing" value="left"/>
+    <property name="map" value="castle2"/>
+    <property name="marker" value="spawn"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

@@ -9,8 +9,8 @@ return {
   height = 12,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 7,
-  nextobjectid = 71,
+  nextlayerid = 8,
+  nextobjectid = 85,
   properties = {},
   tilesets = {
     {
@@ -266,7 +266,7 @@ return {
         },
         {
           id = 63,
-          name = "exit",
+          name = "stairs_up",
           type = "",
           shape = "point",
           x = 179.333,
@@ -297,7 +297,7 @@ return {
     {
       type = "objectgroup",
       draworder = "topdown",
-      id = 5,
+      id = 7,
       name = "objects",
       class = "",
       visible = true,
@@ -306,11 +306,10 @@ return {
       offsety = 0,
       parallaxx = 1,
       parallaxy = 1,
-      tintcolor = { 85, 255, 0 },
       properties = {},
       objects = {
         {
-          id = 55,
+          id = 79,
           name = "interactable",
           type = "",
           shape = "rectangle",
@@ -328,7 +327,7 @@ return {
           }
         },
         {
-          id = 56,
+          id = 80,
           name = "interactable",
           type = "",
           shape = "rectangle",
@@ -344,7 +343,7 @@ return {
           }
         },
         {
-          id = 49,
+          id = 81,
           name = "savepoint",
           type = "",
           shape = "point",
@@ -362,12 +361,12 @@ return {
           }
         },
         {
-          id = 62,
+          id = 82,
           name = "transition",
           type = "",
           shape = "rectangle",
           x = 147,
-          y = 266.667,
+          y = 258.917,
           width = 73,
           height = 39.6667,
           rotation = 0,
@@ -376,16 +375,16 @@ return {
           properties = {
             ["facing"] = "down",
             ["map"] = "castle2",
-            ["marker"] = "spawn"
+            ["marker"] = "stairs_down"
           }
         },
         {
-          id = 65,
+          id = 83,
           name = "script",
           type = "",
           shape = "rectangle",
-          x = 723.667,
-          y = 326,
+          x = 725,
+          y = 326.25,
           width = 50.6667,
           height = 107,
           rotation = 0,
@@ -397,7 +396,7 @@ return {
           }
         },
         {
-          id = 70,
+          id = 84,
           name = "enemy",
           type = "",
           shape = "point",

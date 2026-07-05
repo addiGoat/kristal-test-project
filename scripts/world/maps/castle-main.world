@@ -13,6 +13,13 @@
             "width": 640,
             "x": -640,
             "y": -480
+        },
+        {
+            "fileName": "castle3.tmx",
+            "height": 480,
+            "width": 960,
+            "x": 80,
+            "y": -480
         }
     ],
     "onlyShowAdjacentMaps": false,

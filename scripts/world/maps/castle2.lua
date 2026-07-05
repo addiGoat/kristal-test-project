@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 6,
-  nextobjectid = 25,
+  nextobjectid = 27,
   properties = {},
   tilesets = {
     {
@@ -51,7 +51,7 @@ return {
         55, 4, 40, 41, 42, 54, 5, 35, 20, 20, 20, 36, 37, 3, 54, 54,
         55, 20, 56, 57, 58, 20, 21, 70, 73, 73, 73, 73, 71, 3, 54, 54,
         55, 73, 86, 52, 87, 73, 74, 84, 84, 84, 84, 68, 84, 19, 20, 20,
-        55, 84, 84, 84, 84, 84, 84, 84, 52, 84, 84, 84, 84, 82, 82, 82,
+        55, 84, 84, 84, 84, 84, 84, 84, 52, 84, 84, 84, 84, 72, 73, 73,
         55, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 52, 82, 82,
         55, 55, 55, 55, 55, 55, 55, 84, 84, 84, 84, 84, 84, 55, 55, 55,
         55, 55, 55, 55, 55, 55, 55, 68, 84, 84, 84, 84, 84, 55, 55, 55,
@@ -300,11 +300,25 @@ return {
       objects = {
         {
           id = 8,
-          name = "spawn",
+          name = "stairs_down",
           type = "",
           shape = "point",
           x = 140,
-          y = 300,
+          y = 280,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 26,
+          name = "spawn",
+          type = "",
+          shape = "point",
+          x = 600,
+          y = 320,
           width = 0,
           height = 0,
           rotation = 0,
@@ -343,22 +357,8 @@ return {
           properties = {
             ["facing"] = "down",
             ["map"] = "castle1",
-            ["marker"] = "exit"
+            ["marker"] = "stairs_up"
           }
-        },
-        {
-          id = 20,
-          name = "forcefield",
-          type = "",
-          shape = "rectangle",
-          x = 570,
-          y = 280,
-          width = 40,
-          height = 80,
-          rotation = 0,
-          opacity = 1,
-          visible = true,
-          properties = {}
         },
         {
           id = 21,
@@ -386,7 +386,11 @@ return {
           rotation = 0,
           opacity = 1,
           visible = true,
-          properties = {}
+          properties = {
+            ["facing"] = "right",
+            ["map"] = "castle3",
+            ["marker"] = "exit"
+          }
         }
       }
     }

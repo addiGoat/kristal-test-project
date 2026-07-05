@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="25" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="71">
+<map version="1.11" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="25" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="85">
  <editorsettings>
   <export target="castle1.lua" format="lua"/>
  </editorsettings>
@@ -40,27 +40,27 @@
   <object id="54" name="respawn" x="500" y="380">
    <point/>
   </object>
-  <object id="63" name="exit" x="179.333" y="356.667">
+  <object id="63" name="stairs_up" x="179.333" y="356.667">
    <point/>
   </object>
   <object id="69" name="disengage" x="600" y="400">
    <point/>
   </object>
  </objectgroup>
- <objectgroup id="5" name="objects" tintcolor="#55ff00">
-  <object id="55" name="interactable" x="240" y="280" width="80" height="40">
+ <objectgroup color="#55ff00" id="7" name="objects">
+  <object id="79" name="interactable" x="240" y="280" width="80" height="40">
    <properties>
     <property name="text1" value="* Kris and susie's rooms!"/>
     <property name="text2" value="* And queen's! and lancers!"/>
     <property name="text3" value="* and mine too i guess"/>
    </properties>
   </object>
-  <object id="56" name="interactable" x="440" y="200" width="120" height="40">
+  <object id="80" name="interactable" x="440" y="200" width="120" height="40">
    <properties>
     <property name="text" value="* It doesn't open. It's closed by some contraption."/>
    </properties>
   </object>
-  <object id="49" name="savepoint" x="500" y="320">
+  <object id="81" name="savepoint" x="500" y="320">
    <properties>
     <property name="marker" value="respawn"/>
     <property name="simple" type="bool" value="true"/>
@@ -68,20 +68,20 @@
    </properties>
    <point/>
   </object>
-  <object id="62" name="transition" x="147" y="266.667" width="73" height="39.6667">
+  <object id="82" name="transition" x="147" y="258.917" width="73" height="39.6667">
    <properties>
     <property name="facing" value="down"/>
     <property name="map" value="castle2"/>
-    <property name="marker" value="spawn"/>
+    <property name="marker" value="stairs_down"/>
    </properties>
   </object>
-  <object id="65" name="script" x="723.667" y="326" width="50.6667" height="107">
+  <object id="83" name="script" x="725" y="326.25" width="50.6667" height="107">
    <properties>
     <property name="cutscene" value="examples.dummy"/>
     <property name="once" type="bool" value="false"/>
    </properties>
   </object>
-  <object id="70" name="enemy" x="660" y="380">
+  <object id="84" name="enemy" x="660" y="380">
    <properties>
     <property name="actor" value="dummy"/>
     <property name="encounter" value="dummy"/>
