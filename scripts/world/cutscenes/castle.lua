@@ -6,6 +6,9 @@ return {
         local duration = 0.5
         local timer = 0.0
 
+        local x, y = 820, 190
+        Game.world.player:setPosition(x, y)
+
         c:panTo("exit", 0)
         c:fadeOut(0)
 
@@ -15,7 +18,7 @@ return {
         c:wait(2.5)
 
         Assets.playSound("escaped", 0.7, 0.75)
-        c:walkTo("ralsei", "intro_end_pos", 1)
+        c:walkTo("ralsei", "spawn", 1)
         while timer < duration do
             timer = timer + DT
             local t = timer / duration
@@ -42,6 +45,24 @@ return {
         c:look("ralsei", "left")
         c:attachCameraImmediate()
         Game.world.player.alpha = 1
-    end
+    end,
 
+
+
+    stairs = function (c, _event)
+        c:setSpeaker("ralsei", true)
+        c:text("[face:small_smile_side_b]* I don't think I need to\ngo up there right now...")
+        local x, y = Game.world.player.x, Game.world.player.y
+
+        if not x or not y then
+            c:walkTo("ralsei", "spawn", 0.1)
+        else
+            c:walkTo("ralsei", x, y + 15, 0.1)
+        end
+    end,
+
+    locked = function(c, _event)
+        c:setSpeaker("ralsei", true)
+        c:text("[face:shock_smile]* oh noes it locked!!!!1")
+    end
 }

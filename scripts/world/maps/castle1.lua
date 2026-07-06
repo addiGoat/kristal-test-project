@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 8,
-  nextobjectid = 85,
+  nextobjectid = 87,
   properties = {},
   tilesets = {
     {
@@ -48,7 +48,7 @@ return {
         55, 20, 20, 61, 62, 58, 20, 36, 21, 84, 84, 84, 84, 84, 84, 84, 19, 20, 56, 57, 58, 20, 20, 20, 55,
         55, 73, 73, 86, 84, 87, 73, 73, 74, 84, 84, 84, 84, 84, 84, 84, 72, 73, 86, 84, 87, 73, 73, 73, 55,
         55, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 55,
-        55, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 55,
+        55, 67, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 84, 55,
         55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 84, 84, 84, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55
       }
     },
@@ -198,7 +198,7 @@ return {
           type = "",
           shape = "rectangle",
           x = 440,
-          y = 480,
+          y = 490,
           width = 120,
           height = 40,
           rotation = 0,
@@ -211,9 +211,9 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 220,
+          x = 217,
           y = 280,
-          width = 106.667,
+          width = 103,
           height = 40,
           rotation = 0,
           opacity = 1,
@@ -238,25 +238,11 @@ return {
       objects = {
         {
           id = 53,
-          name = "spawn",
-          type = "",
-          shape = "point",
-          x = 496.296,
-          y = 449.911,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          opacity = 1,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 54,
-          name = "respawn",
+          name = "main_door",
           type = "",
           shape = "point",
           x = 500,
-          y = 380,
+          y = 420,
           width = 0,
           height = 0,
           rotation = 0,
@@ -285,6 +271,20 @@ return {
           shape = "point",
           x = 600,
           y = 400,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 86,
+          name = "spawn",
+          type = "",
+          shape = "point",
+          x = 500,
+          y = 340,
           width = 0,
           height = 0,
           rotation = 0,
@@ -343,39 +343,21 @@ return {
           }
         },
         {
-          id = 81,
-          name = "savepoint",
-          type = "",
-          shape = "point",
-          x = 500,
-          y = 320,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          opacity = 1,
-          visible = true,
-          properties = {
-            ["marker"] = "respawn",
-            ["simple"] = true,
-            ["text"] = "* Something feels...[wait:5] wrong."
-          }
-        },
-        {
           id = 82,
           name = "transition",
           type = "",
           shape = "rectangle",
-          x = 147,
+          x = 141,
           y = 258.917,
-          width = 73,
+          width = 83.5,
           height = 39.6667,
           rotation = 0,
           opacity = 1,
           visible = true,
           properties = {
-            ["facing"] = "down",
-            ["map"] = "castle2",
-            ["marker"] = "stairs_down"
+            ["facing"] = "up",
+            ["map"] = "castle3",
+            ["marker"] = "exit"
           }
         },
         {
@@ -410,6 +392,22 @@ return {
           properties = {
             ["actor"] = "dummy",
             ["encounter"] = "dummy"
+          }
+        },
+        {
+          id = 85,
+          name = "script",
+          type = "",
+          shape = "rectangle",
+          x = 440,
+          y = 480,
+          width = 120,
+          height = 40,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {
+            ["cutscene"] = "castle.locked"
           }
         }
       }

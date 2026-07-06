@@ -7,12 +7,13 @@ function IntroCutscene:init(data)
     self.data = data
 end
 
-function IntroCutscene:postLoad(data)
-    if Game:getFlag("seen_intro", false) then
+function IntroCutscene.postLoad()
+    ---@diagnostic disable-next-line: unnecessary-if
+    if Game:getFlag("seen_intro", true) then
         return
     end
     Game:setFlag("seen_intro", true)
-    local scene = Game.world:startCutscene("castle", "intro")
+    Game.world:startCutscene("castle", "intro")
 end
 
 return IntroCutscene
