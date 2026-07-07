@@ -79,18 +79,20 @@ return {
         eye.alpha = 0
         eye.layer = Game.world.player.layer
         Game.world:addChild(eye)
+        local duration = 1
+        local timer = 1
         c:setSpeaker("ralsei", true)
 
         -- Ralsei knocking
-        -- Assets.playSound("impact", 0.5, 1.3)
-        -- c:wait(4)
-        -- Assets.playSound("impact", 0.5, 1.3)
-        -- c:wait(3)
-        -- Assets.playSound("impact", 0.5, 1.3)
-        -- c:wait(0.2)
-        -- Assets.playSound("impact", 0.5, 1.3)
-        -- c:wait(3)
-        -- c:text("* ...I guess I...[wait:15]\nLeft my key upstairs?[wait:10][react:1]", "surprise_neutral", "ralsei", { reactions = keyReact})
+        Assets.playSound("impact", 0.5, 1.3)
+        c:wait(4)
+        Assets.playSound("impact", 0.5, 1.3)
+        c:wait(3)
+        Assets.playSound("impact", 0.5, 1.3)
+        c:wait(0.2)
+        Assets.playSound("impact", 0.5, 1.3)
+        c:wait(3)
+        c:text("* ...I guess I...[wait:15]\nLeft my key upstairs?[wait:10][react:1]", "surprise_neutral", "ralsei", { reactions = keyReact})
 
         -- eye flash
         Game.world.timer:tween(0.05, eye, {alpha = 1})
@@ -100,11 +102,12 @@ return {
                 eye:remove()
             end)
         end)
+        c:wait(0.25)
+        c:playSound("escaped", 0.5, 0.75)
         c:wait(0.5)
         c:alert("ralsei")
         c:walkTo("ralsei", player.x, player.y, 0, "up")
         c:wait(0.25)
-        c:playSound("escaped", 0.5, 0.75)
         c:wait(0.25)
         c:panTo("sparkle_eye", 1)
         c:wait(0.25)
@@ -115,6 +118,43 @@ return {
         c:walkTo("ralsei", player.x, player.y, 0, "up")
         c:attachCameraImmediate()
         c:wait(1.5)
-        c:text("[face:concern]* Hello?[wait:10] Is someone there?")
+        c:text("[face:shock_smile]* Hello?[wait:10] Is someone there?")
+        c:wait(1)
+        Game:setFlag("door_removed", true)
+        local option = 0
+        local secondChoiceText = "Investigate\nfurther?"
+        local hasInvestigated = false
+        while option ~= 1 do
+            option = c:choicer({"Get key", secondChoiceText})
+
+            if option == 1 then
+                c:text("[face:stressed]* ...[wait:5]I'm sure it was...[wait:10]\njust my imagination.")
+                c:wait(1.5)
+                c:text("[face:surprise_smile]* I'll just... carry\non with what I was\njust doing!")
+                c:text("[face:stressed]* Back upstairs, haha!")
+                return
+            end
+            if not hasInvestigated then
+                hasInvestigated = true
+                secondChoiceText = "Investigate\neven further"
+                c:text("[face:surprise_smile]* ...[wait:10]Helllooooo? There's no\nneed to be shy,[wait:5] I'm\nvery friendly!")
+            else
+                c:text("[face:concern_smile]* well here we go!")
+                c:walkTo("ralsei", "cutscene_stairs_end", 1.5)
+                c:wait(0.5)
+                c:playSound("escaped", 0.75, 0.75)
+                while timer > 0 do
+                    timer = timer - DT
+                    local t = timer / duration
+                    t = math.max(t, 0)
+                    player.alpha = Utils.lerp(0, 1, t)
+                    c:wait()
+                end
+                c:wait(1)
+                c:wait(c:fadeOut(2))
+                c:loadMap("castle_basement")
+                return
+            end
+        end
     end
 }

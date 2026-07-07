@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="25" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="90">
+<map version="1.10" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="25" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="91">
  <editorsettings>
   <export target="castle1.lua" format="lua"/>
  </editorsettings>
@@ -46,10 +46,13 @@
   <object id="86" name="spawn" x="500" y="340">
    <point/>
   </object>
-  <object id="87" name="sparkle_eye" x="800" y="240">
+  <object id="87" name="sparkle_eye" x="792.5" y="248">
    <point/>
   </object>
   <object id="88" name="ralsei_investigate" x="780" y="380">
+   <point/>
+  </object>
+  <object id="90" name="cutscene_stairs_end" x="780" y="260">
    <point/>
   </object>
  </objectgroup>

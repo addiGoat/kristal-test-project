@@ -1,5 +1,5 @@
 return {
-  version = "1.11",
+  version = "1.10",
   luaversion = "5.1",
   tiledversion = "1.12.2",
   class = "",
@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 8,
-  nextobjectid = 90,
+  nextobjectid = 91,
   properties = {},
   tilesets = {
     {
@@ -297,8 +297,8 @@ return {
           name = "sparkle_eye",
           type = "",
           shape = "point",
-          x = 800,
-          y = 240,
+          x = 792.5,
+          y = 248,
           width = 0,
           height = 0,
           rotation = 0,
@@ -313,6 +313,20 @@ return {
           shape = "point",
           x = 780,
           y = 380,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 90,
+          name = "cutscene_stairs_end",
+          type = "",
+          shape = "point",
+          x = 780,
+          y = 260,
           width = 0,
           height = 0,
           rotation = 0,
