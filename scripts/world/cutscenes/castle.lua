@@ -27,6 +27,7 @@ return {
             c:wait()
         end
 
+        c:attachCameraImmediate()
         c:setSpeaker("ralsei", true)
 
         c:text("[face:pleased]* There we go![wait:5]\nAll tidied up!")
@@ -43,7 +44,6 @@ return {
         c:wait(2)
         c:text("[face:pleased]* I'd better go get ready\nfor them!")
         c:look("ralsei", "left")
-        c:attachCameraImmediate()
         Game.world.player.alpha = 1
     end,
 
@@ -63,6 +63,27 @@ return {
 
     locked = function(c, _event)
         c:setSpeaker("ralsei", true)
-        c:text("[face:shock_smile]* oh noes it locked!!!!1")
+        -- Assets.playSound("impact", 0.5, 1.3)
+        -- c:wait(4)
+        -- Assets.playSound("impact", 0.5, 1.3)
+        -- c:wait(3)
+        -- Assets.playSound("impact", 0.5, 1.3)
+        -- c:wait(0.2)
+        -- Assets.playSound("impact", 0.5, 1.3)
+        -- c:wait(1)
+        -- Assets.playSound("impact", 0.5, 1.3)
+        -- c:wait(0.5)
+        -- Assets.playSound("impact", 0.5, 1.3)
+        -- c:wait(3)
+        local keyReact = {
+            text = "* (did I even have a key??)",
+            x = 0,
+            y = 0,
+            face = "concern_smile",
+            actor = "ralsei"
+        }
+        c:text("[face:surprise_neutral]* ...I guess I...[wait:15]\nLeft my key upstairs?[react:keyReact]")
     end
+
+
 }

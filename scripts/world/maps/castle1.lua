@@ -361,40 +361,6 @@ return {
           }
         },
         {
-          id = 83,
-          name = "script",
-          type = "",
-          shape = "rectangle",
-          x = 725,
-          y = 326.25,
-          width = 50.6667,
-          height = 107,
-          rotation = 0,
-          opacity = 1,
-          visible = true,
-          properties = {
-            ["cutscene"] = "examples.dummy",
-            ["once"] = false
-          }
-        },
-        {
-          id = 84,
-          name = "enemy",
-          type = "",
-          shape = "point",
-          x = 660,
-          y = 380,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          opacity = 1,
-          visible = true,
-          properties = {
-            ["actor"] = "dummy",
-            ["encounter"] = "dummy"
-          }
-        },
-        {
           id = 85,
           name = "script",
           type = "",
@@ -407,7 +373,8 @@ return {
           opacity = 1,
           visible = true,
           properties = {
-            ["cutscene"] = "castle.locked"
+            ["cutscene"] = "castle.locked",
+            ["once"] = false
           }
         }
       }

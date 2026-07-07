@@ -8,8 +8,7 @@ function IntroCutscene:init(data)
 end
 
 function IntroCutscene.postLoad()
-    ---@diagnostic disable-next-line: unnecessary-if
-    if Game:getFlag("seen_intro", true) then
+    if Game:getFlag("seen_intro", false) then
         return
     end
     Game:setFlag("seen_intro", true)

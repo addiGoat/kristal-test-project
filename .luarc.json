@@ -2,7 +2,7 @@
   "runtime.version": "LuaJIT",
   "workspace.library": [
     "/home/addigoat/.local/share/kristal-lua-docs/library",
-    "/home/addigoat/projects/Kristal/src"
+    "/home/addigoat/Projects/Engines/Kristal/src"
   ],
   "workspace.checkThirdParty": false,
   "workspace.maxPreload": 5000,

@@ -67,22 +67,10 @@
     <property name="marker" value="exit"/>
    </properties>
   </object>
-  <object id="83" name="script" x="725" y="326.25" width="50.6667" height="107">
-   <properties>
-    <property name="cutscene" value="examples.dummy"/>
-    <property name="once" type="bool" value="false"/>
-   </properties>
-  </object>
-  <object id="84" name="enemy" x="660" y="380">
-   <properties>
-    <property name="actor" value="dummy"/>
-    <property name="encounter" value="dummy"/>
-   </properties>
-   <point/>
-  </object>
   <object id="85" name="script" x="440" y="480" width="120" height="40">
    <properties>
     <property name="cutscene" value="castle.locked"/>
+    <property name="once" type="bool" value="false"/>
    </properties>
   </object>
  </objectgroup>
