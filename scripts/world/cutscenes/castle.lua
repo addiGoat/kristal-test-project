@@ -62,7 +62,26 @@ return {
     end,
 
     locked = function(c, _event)
+        -- init
+        local player = Game.world.player
+        local keyReact = {
+            {
+                "(do I even have a key??)",
+                "rightmid",
+                "bottom",
+                "concern_smile",
+                "ralsei"
+            }
+        }
+
+        local eyeX, eyeY = c:getMarker("sparkle_eye")
+        local eye = Sprite("sparkle", eyeX, eyeY)
+        eye.alpha = 0
+        eye.layer = Game.world.player.layer
+        Game.world:addChild(eye)
         c:setSpeaker("ralsei", true)
+
+        -- Ralsei knocking
         -- Assets.playSound("impact", 0.5, 1.3)
         -- c:wait(4)
         -- Assets.playSound("impact", 0.5, 1.3)
@@ -70,20 +89,32 @@ return {
         -- Assets.playSound("impact", 0.5, 1.3)
         -- c:wait(0.2)
         -- Assets.playSound("impact", 0.5, 1.3)
-        -- c:wait(1)
-        -- Assets.playSound("impact", 0.5, 1.3)
-        -- c:wait(0.5)
-        -- Assets.playSound("impact", 0.5, 1.3)
         -- c:wait(3)
-        local keyReact = {
-            text = "* (did I even have a key??)",
-            x = 0,
-            y = 0,
-            face = "concern_smile",
-            actor = "ralsei"
-        }
-        c:text("[face:surprise_neutral]* ...I guess I...[wait:15]\nLeft my key upstairs?[react:keyReact]")
+        -- c:text("* ...I guess I...[wait:15]\nLeft my key upstairs?[wait:10][react:1]", "surprise_neutral", "ralsei", { reactions = keyReact})
+
+        -- eye flash
+        Game.world.timer:tween(0.05, eye, {alpha = 1})
+        c:playSound("bell", 0.5)
+        Game.world.timer:after(0.1, function()
+            Game.world.timer:tween(0.1, eye, {alpha = 0}, "linear", function()
+                eye:remove()
+            end)
+        end)
+        c:wait(0.5)
+        c:alert("ralsei")
+        c:walkTo("ralsei", player.x, player.y, 0, "up")
+        c:wait(0.25)
+        c:playSound("escaped", 0.5, 0.75)
+        c:wait(0.25)
+        c:panTo("sparkle_eye", 1)
+        c:wait(0.25)
+
+        -- ralsei investigates door
+        c:wait(c:walkTo("ralsei", "main_door", 0.25))
+        c:wait(c:walkTo("ralsei", "ralsei_investigate", 0.75))
+        c:walkTo("ralsei", player.x, player.y, 0, "up")
+        c:attachCameraImmediate()
+        c:wait(1.5)
+        c:text("[face:concern]* Hello?[wait:10] Is someone there?")
     end
-
-
 }
