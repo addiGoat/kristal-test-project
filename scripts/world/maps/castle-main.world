@@ -20,6 +20,13 @@
             "width": 1000,
             "x": 80,
             "y": -520
+        },
+        {
+            "fileName": "castle_basement.tmx",
+            "height": 800,
+            "width": 1200,
+            "x": 1040,
+            "y": 0
         }
     ],
     "onlyShowAdjacentMaps": false,

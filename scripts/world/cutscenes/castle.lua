@@ -1,5 +1,6 @@
 return {
     intro = function (c, _event)
+        print("test debug message")
         -- setup ralsei fade in
         local player = Game.world.player
         player.alpha = 0
